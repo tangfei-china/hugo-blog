@@ -44,3 +44,44 @@ python3 hugo.py -h
 python3 hugo.py -p 新增了博客内容
 ```
 
+## 提示
+
+有了自动化脚本，还可以附加shell脚本更加的方便使用。
+
+```shell
+#!/bin/bash
+echo "执行7本书的运行脚本"
+
+# if [ -z "$1" ]; then
+#    echo "请输入更新的内容描述";
+#       exit 0;
+# fi
+
+if [ "$1" == '-n' ]; then
+# 自动化脚本的根目录
+cd /Users/kid/tangf/SevenBook/site/hugo-blog
+python3 hugo.py $1
+fi
+
+if [ "$1" == '-p' ]; then
+# 自动化脚本的根目录
+cd /Users/kid/tangf/SevenBook/site/hugo-blog
+python3 hugo.py $1 $2
+fi
+
+echo "操作结束"
+```
+
+有了脚本已经方便了很多，如果在加上别名（alias）的加成，体验超群
+
+```shell
+# vim ~/.zshrc 的配置
+alias hn='sh /Users/kid/tangf/SevenBook/site/hugo-blog.sh'
+
+# 使用，直接在终端
+# 新增博客  
+# hn -n 
+# 发布博客
+# hn -p 更新信息
+```
+
