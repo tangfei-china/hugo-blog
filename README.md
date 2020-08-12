@@ -76,7 +76,17 @@ echo "操作结束"
 
 ```shell
 # vim ~/.zshrc 的配置
+# 执行自动化脚本
 alias hn='sh /Users/kid/tangf/SevenBook/site/hugo-blog.sh'
+
+# 打开博客目录
+alias hnl='open /Users/kid/tangf/SevenBook/site/content/post'
+
+# 查看当前博客的状态
+alias hns='cd /Users/kid/tangf/SevenBook/site/content/post;git status'
+
+# 删除未跟踪的文件
+alias hnd='cd /Users/kid/tangf/SevenBook/site/content/post;git clean -nf'
 
 # 使用，直接在终端
 # 新增博客  
