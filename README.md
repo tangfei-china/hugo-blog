@@ -9,6 +9,13 @@
 >
 > b502ad28aadf410ab6d3aad927442b84  随机生成的
 
+## 前提
+
+1. 没有足够的钱
+2. 安装hugo的程序 地址：https://gohugo.io/
+3. python
+4. git
+
 ## 配置文件
 
 ```xml
@@ -39,6 +46,8 @@ sonic=/Users/kid/tangf/SevenBook/site/sonicIndex/search_index
 sonic_conf=/Users/kid/tangf/SevenBook/site/sonicIndex/conf.yaml
 ```
 
+> 其中使用的搜索使用的是sonic的技术，详细看：https://github.com/tangfei-china/hugo-search-fast
+
 ## 使用
 
 ```shell
@@ -54,7 +63,7 @@ python3 hugo.py -p 新增了博客内容
 
 ## 提示
 
-有了自动化脚本，还可以附加shell脚本更加的方便使用。
+有了自动化脚本（hugo-blog.sh），还可以附加shell脚本更加的方便使用。
 
 ```shell
 #!/bin/bash
@@ -103,3 +112,8 @@ alias hnd='cd /Users/kid/tangf/SevenBook/site/content/post;git clean -nf'
 # hn -p 更新信息
 ```
 
+## 总结
+
+> 主要做了写博客和发布的一个流程整合，如果资金过的话，就不要这样折腾了（静态博客）
+>
+> 例如：https://www.7benshu.com/
